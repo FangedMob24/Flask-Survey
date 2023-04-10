@@ -5,10 +5,12 @@
 {% block content %}
 
 <h1> {{title}} </h1>
-<form action="/question/0">
-    <h2> {{instructions}} </h2>
+<h2> {{instructions}} </h2>
 
-    <button>Start Survey</button>
+{% set myList = [] %}
+
+<form action="/start-survey" method="POST">
+    <button name="start" value="{{ myList }}">Start Survey</button>
 </form>
 
 
